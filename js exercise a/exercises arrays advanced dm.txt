@@ -138,3 +138,42 @@ function shuffle(array) {
 
 
 	ex. 10
+function getAverageAge(users2){
+    let totalAge = users2.reduce(function(sum, user) {
+        return sum + user.age;
+      }, 0);
+    
+      let averageAge = totalAge / users.length;
+    
+      return averageAge;
+    }
+    
+    let users2 = [
+      { name: "Logan", age: 25 },
+      { name: "Bob", age: 19 },
+      { name: "Keanu", age: 46 }
+    ];
+    
+    let averageAge = getAverageAge(users2);
+    
+    console.log(averageAge);
+
+	ex. 11
+function groupById(arr) {
+    let result = arr.reduce(function(names, user) {
+      names[user.id] = user;
+      return names;
+    }, {});
+  
+    return result;
+}
+  
+  let users3 = [
+    {id: 'john', name: "John Wick", age: 35},
+    {id: 'log', name: "Logan Lopez", age: 25},
+    {id: 'pete', name: "Pete Snicker", age: 31},
+];
+  
+  let usersById = groupById(users3);
+  console.log(usersById);
+  
