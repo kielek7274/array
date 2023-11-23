@@ -1,0 +1,140 @@
+ex. 1
+
+function camelize(str) {
+    let words = str.split('-');
+  
+    for (let i = 1; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+  
+    return words.join('');
+  }
+  
+  let result1 = camelize("my-short-string");
+  console.log(result1); 
+  
+
+	ex. 2
+
+
+function filterRange(arr, a, b) {
+    let result = arr.filter(function(element) {
+      return element >= a && element <= b;
+    });
+  
+    return result;
+  }
+
+  let originalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let filteredArray = filterRange(originalArray, 3, 5, 7);
+  
+  console.log(originalArray); 
+  console.log(filteredArray);  
+  
+
+	ex. 3
+function filterRangeInPlace(arr, a, b) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < a || arr[i] > b) {
+        arr.splice(i, 1);
+        i--; 
+      }
+    }
+  }
+
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  filterRangeInPlace(array, 3, 7);
+  
+  console.log(array);  
+  
+
+	ex. 4
+
+let numbers = [2, 7, 8, 1, 6, 5];
+
+numbers.sort(function(a, b) {
+  return b - a; 
+});
+
+console.log(numbers);
+
+	ex. 5
+function copySorted(arr) {
+    let sortedCopy1 = arr.slice();
+
+    sortedCopy1.sort();
+
+    return sortedCopy1;
+}  
+let originalArray1 = ["car", "train", "helicopter", "truck"];
+let sortedArray1 = copySorted(originalArray1);
+  
+  console.log(originalArray1); 
+  console.log(sortedArray1);  
+
+	ex. 6
+let user = [
+    {name: "John", age: 20},
+    {name: "Logan", age: 25},
+    {name: "Sierra", age: 15}
+]
+
+let convertArray = user.map(function(user) {
+    return user.name;
+});
+
+console.log(convertArray)
+
+	ex. 7
+
+let users = [
+    {name: "John", surname: "Wick", id: 1},
+    {name: "Vi", surname: "Stay", id: 2},
+    {name: "Logan", surname: "Lopez", id: 3}
+]
+
+// fullName = name + surname
+
+let fullNameUsers = users.map(function(user) {
+    return {
+        id: user.id,
+        fullName: user.name + " " + user.surname
+    };
+});
+
+console.log(fullNameUsers)
+
+	ex. 8
+function sortByAge(users1) {
+    users1.sort(function (a, b){
+        return a.age - b.age;
+    });
+};
+
+let users1 = [
+    {name: "Agent", age:22},
+    {name: "H", age:23},
+    {name:"Jayce", age:11}
+];
+
+sortByAge(users1);
+
+console.log(users1);
+
+	ex. 9
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+
+      [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+    }
+  }
+
+  let shuffledArray = [1, 2, 3, 4, 5, 6, 7, 8];
+  shuffle(shuffledArray);
+  
+  console.log(shuffledArray);
+
+
+	ex. 10

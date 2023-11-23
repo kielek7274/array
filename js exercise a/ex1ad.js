@@ -1,9 +1,13 @@
-function camelize(str){
-    str.split("-");
-    str.map((word, index) => {
-        return index === 0 ? word : word[0].toUpperCase() + word.slice(1)
-    }).join("");
+function camelize(str) {
+    let words = str.split('-');
+  
+    for (let i = 1; i < words.length; i++) {
+      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
     }
-
-    let result = camelize("my-short-string");
-console.log(result);
+  
+    return words.join('');
+  }
+  
+  let result1 = camelize("my-short-string");
+  console.log(result1); 
+  
