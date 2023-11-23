@@ -16,3 +16,5 @@ function getMaxSubSum(arr) {
   console.log(getMaxSubSum([-2, -1, 1, 2]) )
   console.log(getMaxSubSum([100, -9, 2, -3, 5]))
   console.log(getMaxSubSum([1, 2, 3]))
+  console.log(getMaxSubSum([8,1,5,4,9,-17]))
+  console.log(getMaxSubSum([-9,-2,8,-1,3,5,-2]))
